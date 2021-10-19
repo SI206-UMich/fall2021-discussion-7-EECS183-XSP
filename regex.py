@@ -1,3 +1,5 @@
+#Xinwei Sage Pei 
+#Worked with Marina Sun
 import re
 import os
 import unittest
@@ -23,17 +25,21 @@ def find_word(string_list):
     """ Return a list of words that contain three digit numbers in the middle. """
 
     # initialize an empty list
-
+    word_list = []
     # define the regular expression
-
+    expression = r'\b([a-zA-z]+)\d{3}([a-zA-Z]+)'
     # loop through each line of the string list 
+    for line in string_list:
 
     # find all the words that match the regular expression in each line
-    
-    # loop through the found words and add the words to your empty list 
-
+        match = re.findall(expression,line)
+        for word in match:
+            str = " "
+            for x in word:
+                str += x
+            word_list.append(str)
     #return the list of all words that start with the letter B, E, or T
-    pass
+    return word_list
 
 
 def find_days(string_list):
