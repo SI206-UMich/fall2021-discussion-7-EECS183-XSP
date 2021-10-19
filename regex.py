@@ -25,7 +25,7 @@ def find_word(string_list):
     """ Return a list of words that contain three digit numbers in the middle. """
 
     # initialize an empty list
-    
+    word_list = []
     # define the regular expression
     expression = r'\b([a-zA-z]+)\d{3}([a-zA-Z]+)'
     # loop through each line of the string list 
@@ -51,7 +51,6 @@ def find_days(string_list):
     expression = r'\b\d(1,2)[\/](\d(1,2))[\/](\d{4})'
     expression = r'^(0?[1-9]|1[0-2])\/(0?[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$'
     # loop through each line of the string list
-    
     for x in string_list:
         match = re.findall(expression,x)
         for date in match:
